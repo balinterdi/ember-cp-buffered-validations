@@ -1,0 +1,20 @@
+<form {{action "saveUser" on="submit"}}>
+  <p>
+    Name:
+    <input
+      type="text"
+      name="user-name"
+      value={{this.model.name}}
+      {{action (mut this.model.name) value="target.value"}}
+    >
+  </p>
+  <p>
+    model.shouldValidate: {{this.model.shouldValidate}}
+  </p>
+  <p>
+    Is name valid? {{v-get this.model "name" "isValid"}}
+  </p>
+  <button type="submit">Save</button>
+</form>
+
+<LinkTo @route="buf-proxy" >Use Buffered Proxy</LinkTo>
