@@ -6,15 +6,19 @@
       name="user-name"
       value={{this.model.name}}
       {{action (mut this.model.name) value="target.value"}}
-    >
+    />
   </p>
   <p>
-    model.shouldValidate: {{this.model.shouldValidate}}
+    model.shouldValidate:
+    {{this.model.shouldValidate}}
   </p>
   <p>
     {{!-- Is name valid? {{v-get this.model "name" "isValid"}} --}}
   </p>
-  <button type="submit">Save</button>
+  <button type="submit">
+    Save
+  </button>
 </form>
-
-<LinkTo @route="index">Use Pure Model</LinkTo>
+<LinkTo @route="index">
+  Use Pure Model
+</LinkTo>

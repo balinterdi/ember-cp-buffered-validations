@@ -1,5 +1,6 @@
 import Controller from "@ember/controller";
 import { observer } from "@ember/object";
+import { action } from "@ember/object";
 
 export default Controller.extend({
   // eslint-disable-next-line ember/no-observers
@@ -15,13 +16,13 @@ export default Controller.extend({
       console.log(
         "Model is valid: ",
         this.model,
-        this.model.get("validations.isValid")
+        this.model.get("content.validations.isValid")
       );
-      this.model.set("shouldValidate", true);
+      this.model.set("content.shouldValidate", true);
       console.log(
         "Model is valid: ",
         this.model,
-        this.model.get("validations.isValid")
+        this.model.get("content.validations.isValid")
       );
     }
   }
